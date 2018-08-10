@@ -1,29 +1,29 @@
 module.exports = function(sequelize, DataTypes) {
-    var quote = sequelize.define('quote', {
+    var user = sequelize.define('user', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
-            field: 'id'
-        },
-        author_id: {
-            type: DataTypes.INTEGER
-        },
-        quote: {
+        },        
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true
             }
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     }, {
         timestamps: false,
         freezeTableName: true
     });
 
-    quote.associate = function(models) {
-        models.quote.belongsTo(models.author, { foreignKey: "author_id", targetKey: "id" });
+    user.associate = function(models) {
+        // models.jurusan.belongsTo(models.author, { foreignKey: "author_id", targetKey: "id" });
     }
 
-    return quote;
+    return user;
 }

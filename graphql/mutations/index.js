@@ -1,10 +1,11 @@
-import createAuthor from './author/create.js';
-
-import deleteQuote from './quote/delete.js';
-import updateQuote from './quote/update.js';
+import tambahMahasiswa from './mahasiswa/tambah.js';
+import editMahasiswa from './mahasiswa/edit.js';
+import hapusMahasiswa from './mahasiswa/hapus';
+import daftarUser from './user/daftar';
 
 export default {
-    createAuthor,
-    deleteQuote,
-    updateQuote,
+    tambahMahasiswa,
+    editMahasiswa,
+    hapusMahasiswa,
+    daftarUser
 };

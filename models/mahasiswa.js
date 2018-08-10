@@ -1,19 +1,19 @@
 module.exports = function(sequelize, DataTypes) {
-    var author = sequelize.define('author', {
+    var mahasiswa = sequelize.define('Mahasiswa', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
             field: 'id'
         },
-        name: {
+        mahasiswa: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
-        last_name: {
+        nim: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -25,9 +25,9 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true
     });
 
-    author.associate = function(models) {
-        models.author.hasMany(models.quote, { foreignKey: "author_id", sourceKey: "id" });
+    mahasiswa.associate = function(models) {
+        // models.author.hasMany(models.quote, { foreignKey: "author_id", sourceKey: "id" });
     }
 
-    return author;
+    return mahasiswa;
 }

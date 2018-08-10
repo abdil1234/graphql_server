@@ -1,12 +1,7 @@
-import quote from './quote/quote.js';
-import quotes from './quote/quotes.js';
-
-import author from './author/author.js';
-import authors from './author/authors.js';
+import mahasiswas from './mahasiswa/mahasiswas.js';
+import mahasiswa from './mahasiswa/mahasiswa.js';
 
 export default {
-    quote,
-    quotes,
-    author,
-    authors
+    mahasiswas,
+    mahasiswa
 };
